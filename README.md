@@ -4,12 +4,6 @@ A股订单簿工具，使用逐笔行情进行订单簿重建、千档快照发�
 
 ---
 
-主分支有很多新代码未合并，目前主要工作在以下分支：
-
-https://github.com/fpga2u/AXOrderBook/tree/PxPrecision4
-
----
-
 ## 订单簿（Order Book）及其重建
 
 订单簿是某只交易标的在某一时刻买卖订单按价格档位组织而成的列表，常见的5档快照即是订单簿最优5档价格的切片。完整的订单簿包括所有存在有效订单的价格档以及每个价格档上的排队订单。
@@ -53,6 +47,7 @@ A股交易所L2行情相关背景参考：[交易所L2行情与撮合原理](/do
 * windows 10 / Centos 8 stream
 
 * Anaconda + python 3.8.10
+  * 或直接使用: Anaconda3-2021.04
 
 ---
 
@@ -68,7 +63,7 @@ A股交易所L2行情相关背景参考：[交易所L2行情与撮合原理](/do
 
 * Xilinx Alveo U50
 
-* Xilinx pynq 2.6.2
+* Xilinx pynq 3.0.0
 
 ---
 
@@ -98,10 +93,14 @@ A股交易所L2行情相关背景参考：[交易所L2行情与撮合原理](/do
 
 * [订单簿重建流程梳理](doc/ob_workflow.md)
 
-* HLS 链表工具和测试
+* [订单簿重建行为模型](py/behave/axob.py)
 
 * HLS AVL工具和测试
 
 * [HLS HBM工具和测试](doc/hls_hbm.md)
+
+* [HLS 二分法查找测试](hw/test/binarySearch/binarySearch.cpp)
+
+* ~~HLS 链表工具和测试~~
 
 * HLS 测试环境
