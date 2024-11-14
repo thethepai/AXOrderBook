@@ -6,6 +6,11 @@ import tool.test.test_pipeline as pp
 import tool.msg_util as msg_util
 import tool.axsbe_base
 
+import os
+
+if not os.path.exists("log"):
+    os.makedirs("log")
+
 if __name__== '__main__':
     msg.TEST_msg_byte_stream()
     msg.TEST_msg_SL()
